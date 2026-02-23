@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Traffic Control System</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #eeeeee;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { margin-bottom: 5px; color: #00FFCC; }
+        .info { color: #aaaaaa; font-size: 0.9em; margin-bottom: 20px; }
+        canvas {
+            background-color: #4CAF50;
+            border: 4px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border-radius: 8px;
+        }
+        #loading {
+            color: #FF9800;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🧠 Adaptive AI Traffic Controller</h1>
+    <p class="info">Final Year Project | Pressure-Based Control & Emergency Override</p>
+    
+    <div id="loading">Loading Neural Modules & Physics Engine...</div>
+    
+    <canvas id="trafficCanvas"></canvas>
+
+    <py-config>
+        [[fetch]]
+        files = ["./traffic_ai.py", "./analytics.py", "./simulation.py"]
+    </py-config>
+
+    <script type="py" src="./simulation.py"></script>
+
+</body>
+</html>
